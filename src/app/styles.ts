@@ -1,8 +1,8 @@
 import styled, { css } from "styled-components";
 
-export const Test = styled.div`
+export const Nav = styled.nav`
   ${({ theme }) =>
     css`
-      background-color: ${theme.colors.primary};
+      background-color: ${theme.colors.secondary};
     `}
 `;
