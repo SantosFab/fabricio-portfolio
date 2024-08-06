@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
 import { StyledComponentsRegistry } from "@/lib/registry";
-import { ThemeClient } from "@/lib/ThemeClient";
+import "../styles/tailwinds.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,11 +16,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-br">
       <body className={inter.className}>
-        <StyledComponentsRegistry>
-          <ThemeClient>{children}</ThemeClient>
-        </StyledComponentsRegistry>
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
     </html>
   );

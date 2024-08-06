@@ -1,7 +1,13 @@
 "use client";
-import { theme } from "@/styles/theme";
 import { ThemeProvider } from "styled-components";
+import { ReactNode } from "react";
+import { DefaultTheme } from "styled-components/dist/types";
 
-export function ThemeClient({ children }: { children: React.ReactNode }) {
+interface ThemeClientProps {
+  children: ReactNode;
+  theme: DefaultTheme;
+}
+
+export function ThemeClient({ children, theme }: ThemeClientProps) {
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 }
