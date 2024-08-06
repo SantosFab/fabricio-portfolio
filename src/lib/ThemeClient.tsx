@@ -2,6 +2,7 @@
 import { ThemeProvider } from "styled-components";
 import { ReactNode } from "react";
 import { DefaultTheme } from "styled-components/dist/types";
+import GlobalStyles from "@/styles/globals";
 
 interface ThemeClientProps {
   children: ReactNode;
@@ -9,5 +10,10 @@ interface ThemeClientProps {
 }
 
 export function ThemeClient({ children, theme }: ThemeClientProps) {
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      {children}
+    </ThemeProvider>
+  );
 }
