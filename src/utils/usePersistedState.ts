@@ -7,19 +7,40 @@ export function usePersistedState<T>(
   key: string,
   initialState: T
 ): IResponse<T> {
-  const [theme, settheme] = useState(() => {
-    const storageValue = localStorage.getItem(key);
-
-    if (storageValue) {
-      return JSON.parse(storageValue);
-    } else {
-      return initialState;
-    }
-  });
+  const [storedValue, setStoredValue] = useState(initialState);
+  const [firstLoadDone, setFirstLoadDone] = useState(false);
 
   useEffect(() => {
-    localStorage.setItem(key, JSON.stringify(theme));
-  }, [theme, key]);
+    const fromLocal = () => {
+      if (typeof window === "undefined") {
+        return initialState;
+      }
+      try {
+        const item = window.localStorage.getItem(key);
+        return item ? (JSON.parse(item) as T) : initialState;
+      } catch (error) {
+        console.error(error);
+        return initialState;
+      }
+    };
 
-  return [theme, settheme];
+    setStoredValue(fromLocal);
+    setFirstLoadDone(true);
+  }, [initialState, key]);
+
+  useEffect(() => {
+    if (!firstLoadDone) {
+      return;
+    }
+
+    try {
+      if (typeof window !== "undefined") {
+        window.localStorage.setItem(key, JSON.stringify(storedValue));
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }, [storedValue, firstLoadDone, key]);
+
+  return [storedValue, setStoredValue];
 }
