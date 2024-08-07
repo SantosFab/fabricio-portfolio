@@ -1,5 +1,7 @@
+export type ThemeType = "light" | "dark";
+
 export interface ITheme {
-  title: string;
+  title: ThemeType;
   colors: {
     primary: string;
     secondary: string;
