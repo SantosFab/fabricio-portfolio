@@ -4,12 +4,9 @@ export const StyledSessionContainer = styled.div`
   ${({ theme }) => css`
     color: ${theme.fontColors.four};
     min-height: 85vh;
-    display: flex;
-    justify-content: start;
-    align-items: start;
+
     &:first-of-type {
       height: calc(100vh - 70px);
-      align-items: center;
     }
 
     &:nth-child(even) {
@@ -21,11 +18,17 @@ export const StyledSessionContainer = styled.div`
   `}
 `;
 
-export const StyledDiv = styled.div`
+export const StyledDiv = styled.div<{ $isColumn?: boolean }>`
   ${({}) => css`
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding: 0 40px;
+    min-height: 85vh;
   `}
+  flex-direction: ${({ $isColumn = true }) => ($isColumn ? "column" : "row")};
+  padding: ${({ $isColumn = true }) => ($isColumn ? "40px 0" : "")};
 `;
 
 export const StyledTitle = styled.h1`

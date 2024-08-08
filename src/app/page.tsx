@@ -7,7 +7,7 @@ import SessionContainer from "@/component/sessionContainer/SessionContainer";
 export default function Home() {
   return (
     <main className="">
-      <SessionContainer>
+      <SessionContainer isColumn={false}>
         <div className="w-full lg:w-1/2 flex flex-col justify-center items-start">
           <Styled.StyledTitle>Olá! Sou Fabrício Santos</Styled.StyledTitle>
           <Styled.StyledParagraph $fontSize="1.1vw">
@@ -42,7 +42,6 @@ export default function Home() {
         </div>
       </SessionContainer>
 
-      {/*
       <SessionContainer title="Ferramentas">
         <div className="flex flex-row flex-wrap justify-center">
           <Technology title="HTML"></Technology>
@@ -58,7 +57,7 @@ export default function Home() {
       </SessionContainer>
       <SessionContainer title="Entre em contato">
         <div>test</div>
-      </SessionContainer> */}
+      </SessionContainer>
     </main>
   );
 }
