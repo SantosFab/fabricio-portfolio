@@ -1,14 +1,17 @@
 import { ITheme } from "./ITheme";
+import { sharedValues } from "./sharedValues";
 
 export const light: ITheme = {
   title: "light",
-  colors: {
-    primary: "yellow",
-    secondary: "pink",
+  ...sharedValues,
+  fontColors: {
+    one: "#EDFDFF",
+    two: "#E0FFF2",
+    three: "#CCE8E4",
+    four: "#2c3e50",
   },
   background: {
-    foreground_rgb: "0, 0, 0",
-    background_start_rgb: "214, 219, 220",
-    background_end_rgb: "255, 255, 255",
+    color1: "#E0EBFF",
+    color2: "#CCDDE8",
   },
 };

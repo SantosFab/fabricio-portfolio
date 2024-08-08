@@ -2,24 +2,66 @@
 import styled, { css } from "styled-components";
 import Link from "next/link";
 
-export const Nav = styled.nav`
+export const StyledNav = styled.nav`
   ${({}) =>
     css`
       display: flex;
-      height: 60px;
+      height: 70px;
       justify-content: end;
       align-items: center;
+      padding: 0 40px;
     `}
 `;
 
-export const StyledLink = styled(Link)`
-  text-decoration: none;
-  color: ${({ theme }) => theme.colors.primary};
-  padding: 10px;
-  border-radius: 5px;
+export const StyledNavegation = styled(Link)`
+  ${({ theme }) => css`
+    text-decoration: none;
+    color: ${theme.fontColors.four};
+    padding: 10px;
+    border-radius: 5px;
+    &:hover {
+      color: ${theme.fontColors.two};
+    }
+  `}
+`;
 
-  &:hover {
-    background-color: ${({ theme }) => theme.colors.secondary};
-    color: ${({ theme }) => theme.colors.primary};
+export const StyledTitle = styled.h1`
+  ${({ theme }) => css`
+    font-size: ${theme.fontSize.title1};
+    @media (max-width: 1024px) {
+      font-size: ${theme.fontSize.title2};
+    }
+  `}
+`;
+
+interface ParagraphProps {
+  $fontSize?: string;
+}
+
+export const StyledParagraph = styled.div<ParagraphProps>`
+  ${({ theme }) => css`
+    color: ${theme.fontColors.four};
+  `}
+  font-size: ${({ $fontSize }) => $fontSize || "16px"};
+
+  @media (max-width: 1024px) {
+    font-size: 15px;
   }
+`;
+
+export const StyledLink = styled.a`
+  ${({ theme }) => css`
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 15px;
+    padding: 6px 16px;
+    border: 2px solid ${theme.fontColors.four};
+
+    &:first-of-type {
+      margin-right: 20px;
+      background-color: ${theme.background.color2};
+      color: ${theme.fontColors.four};
+      border-color: ${theme.background.color2};
+    }
+  `}
 `;
