@@ -9,13 +9,8 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    color: rgb(${({ theme }) => theme.background.foreground_rgb});
-    background: linear-gradient(
-        to bottom,
-        transparent,
-        rgb(${({ theme }) => theme.background.background_end_rgb})
-      )
-      rgb(${({ theme }) => theme.background.background_start_rgb});
+    color: ${({ theme }) => theme.fontColors.four};
+    background-color: ${({ theme }) => theme.background.color2};
   }
 `;
 

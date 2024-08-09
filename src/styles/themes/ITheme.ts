@@ -2,13 +2,20 @@ export type ThemeType = "light" | "dark";
 
 export interface ITheme {
   title: ThemeType;
-  colors: {
-    primary: string;
-    secondary: string;
+  fontSize: {
+    title1: string;
+    title2: string;
+    title3: string;
+    paragraph: string;
+  };
+  fontColors: {
+    one: string;
+    two: string;
+    three: string;
+    four: string;
   };
   background: {
-    foreground_rgb: string;
-    background_start_rgb: string;
-    background_end_rgb: string;
+    color1: string;
+    color2: string;
   };
 }

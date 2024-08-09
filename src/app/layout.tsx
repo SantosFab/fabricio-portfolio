@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { StyledComponentsRegistry } from "@/lib/registry";
 import { ThemeProvider } from "@/reducer/Theme/ThemeProvider";
-import Button from "@/component/Button";
+import Input from "@/app/animations/inputAnimation/InputAnimation";
 import * as Styled from "./styles";
 import "../styles/tailwinds.css";
 
@@ -20,17 +20,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body
-        className={`${inter.className} container mx-auto px-4 min-h-screen`}
-      >
+      <body className={`${inter.className} mx-auto min-h-screen`}>
         <StyledComponentsRegistry>
           <ThemeProvider>
-            <Styled.Nav>
-              <Styled.StyledLink href={"/"}>Início</Styled.StyledLink>
-              <Styled.StyledLink href={"/About"}>Sobre</Styled.StyledLink>
-              <Styled.StyledLink href={"/Project"}>Projeto</Styled.StyledLink>
-              <Button />
-            </Styled.Nav>
+            <Styled.StyledNav className="container mx-auto">
+              <Styled.StyledNavegation href={"/"}>
+                Início
+              </Styled.StyledNavegation>
+              <Styled.StyledNavegation href={"/Project"}>
+                Projeto
+              </Styled.StyledNavegation>
+              <Input />
+            </Styled.StyledNav>
             {children}
           </ThemeProvider>
         </StyledComponentsRegistry>
