@@ -24,19 +24,18 @@ export const StyledDiv = styled.div<{ $isColumn?: boolean }>`
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 40px;
+    padding: 40px;
     min-height: 85vh;
   `}
   flex-direction: ${({ $isColumn = true }) => ($isColumn ? "column" : "row")};
-  padding: ${({ $isColumn = true }) => ($isColumn ? "40px 0" : "")};
 `;
 
-export const StyledTitle = styled.h1`
+export const StyledTitle = styled.h2`
   ${({ theme }) => css`
-    display: inline;
-    font-size: ${theme.fontSize.title2};
+    padding-bottom: 40px;
+    font-size: ${theme.fontSize.subTitleResponse};
     @media (max-width: 1024px) {
-      font-size: ${theme.fontSize.title3};
+      font-size: ${theme.fontSize.subTitleFixed};
     }
   `}
 `;

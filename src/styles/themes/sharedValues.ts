@@ -1,8 +1,10 @@
 export const sharedValues = {
   fontSize: {
-    title1: "3vw",
-    title2: "38px",
-    title3: "30px",
-    paragraph: "16px",
+    titleFixed: "38px",
+    titleResponse: "3vw",
+    subTitleFixed: "30px",
+    subTitleResponse: "2.5vw",
+    paragraphFixed: "16px",
+    paragraphResponse: "1.1vw",
   },
 };

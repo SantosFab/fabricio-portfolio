@@ -26,23 +26,21 @@ export const StyledNavegation = styled(Link)`
 
 export const StyledTitle = styled.h1`
   ${({ theme }) => css`
-    font-size: ${theme.fontSize.title1};
+    font-size: ${theme.fontSize.titleResponse};
     @media (max-width: 1024px) {
-      font-size: ${theme.fontSize.title2};
+      font-size: ${theme.fontSize.titleFixed};
     }
   `}
 `;
 
-interface ParagraphProps {
-  $fontSize?: string;
-}
-
-export const StyledParagraph = styled.div<ParagraphProps>`
-  ${({}) => css``}
-  font-size: ${({ $fontSize }) => $fontSize || "16px"};
+export const StyledParagraph = styled.div`
+  ${({}) => css`
+    font-size: ${({ theme }) => theme.fontSize.paragraphResponse};
+    text-align: center;
+  `}
 
   @media (max-width: 1024px) {
-    font-size: 15px;
+    font-size: ${({ theme }) => theme.fontSize.paragraphFixed};
   }
 `;
 
