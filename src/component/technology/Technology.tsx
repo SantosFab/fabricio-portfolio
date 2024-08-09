@@ -1,15 +1,19 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, ReactNode } from "react";
 import * as Styled from "./styles";
 
 interface TechnologyProps {
   title: string;
+  animation?: ReactNode;
 }
 
-const Technology: FunctionComponent<TechnologyProps> = ({ title }) => {
+const Technology: FunctionComponent<TechnologyProps> = ({
+  title,
+  animation,
+}) => {
   return (
     <Styled.StyledTechnology>
-      <div>IMGFic</div>
       <p>{title}</p>
+      {animation}
     </Styled.StyledTechnology>
   );
 };

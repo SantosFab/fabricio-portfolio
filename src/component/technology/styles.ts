@@ -2,14 +2,10 @@ import styled, { css } from "styled-components";
 
 export const StyledTechnology = styled.h2`
   ${({}) => css`
-    width: 300px;
-    height: 300px;
-    div {
-      color: blue;
-    }
-
-    p {
-      color: pink;
-    }
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   `}
 `;

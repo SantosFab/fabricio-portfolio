@@ -3,10 +3,12 @@ export type ThemeType = "light" | "dark";
 export interface ITheme {
   title: ThemeType;
   fontSize: {
-    title1: string;
-    title2: string;
-    title3: string;
-    paragraph: string;
+    titleFixed: string;
+    titleResponse: string;
+    subTitleFixed: string;
+    subTitleResponse: string;
+    paragraphFixed: string;
+    paragraphResponse: string;
   };
   fontColors: {
     one: string;

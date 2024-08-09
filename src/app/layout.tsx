@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { StyledComponentsRegistry } from "@/lib/registry";
 import { ThemeProvider } from "@/reducer/Theme/ThemeProvider";
-import Input from "@/app/animations/inputAnimation/InputAnimation";
+import Input from "@/animations/inputAnimation/InputAnimation";
 import * as Styled from "./styles";
 import "../styles/tailwinds.css";
 
