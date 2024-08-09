@@ -3,13 +3,16 @@ import Contact from "@/component/contact/Contact";
 import * as Styled from "./styles";
 import Technology from "@/component/technology/Technology";
 import SessionContainer from "@/component/sessionContainer/SessionContainer";
+import { TitleAnimation } from "./animations/titleAnimation/TitleAnimation";
 
 export default function Home() {
   return (
     <main className="">
       <SessionContainer isColumn={false}>
         <div className="w-full lg:w-1/2 flex flex-col justify-center items-start">
-          <Styled.StyledTitle>Olá! Sou Fabrício Santos</Styled.StyledTitle>
+          <Styled.StyledTitle>
+            <TitleAnimation />
+          </Styled.StyledTitle>
           <Styled.StyledParagraph $fontSize="1.1vw">
             Desenvolvedor Front-end com foco em desenvolvimento Web
           </Styled.StyledParagraph>
@@ -34,11 +37,11 @@ export default function Home() {
           um tempo ferramentas Mobile, mas logo migrei para o desenvolvimento
           Web e aqui estou!
         </p>
-        <div>
+        <div className="flex justify-around flex-wrap w-full">
           <Contact title="Nome Completo" body="Fabrício dos Santos"></Contact>
-          <Contact title="E-mail" body="fabriciosantos.dev@gmail.com"></Contact>
-          <Contact title="GitHub" body="@SantosFab"></Contact>
           <Contact title="Telefone de Contato" body="(79) 99672-9791"></Contact>
+          <Contact title="GitHub" body="@SantosFab"></Contact>
+          <Contact title="E-mail" body="fabriciosantos.dev@gmail.com"></Contact>
         </div>
       </SessionContainer>
 

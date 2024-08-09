@@ -16,7 +16,6 @@ export const StyledNav = styled.nav`
 export const StyledNavegation = styled(Link)`
   ${({ theme }) => css`
     text-decoration: none;
-    color: ${theme.fontColors.four};
     padding: 10px;
     border-radius: 5px;
     &:hover {
@@ -39,9 +38,7 @@ interface ParagraphProps {
 }
 
 export const StyledParagraph = styled.div<ParagraphProps>`
-  ${({ theme }) => css`
-    color: ${theme.fontColors.four};
-  `}
+  ${({}) => css``}
   font-size: ${({ $fontSize }) => $fontSize || "16px"};
 
   @media (max-width: 1024px) {
@@ -60,7 +57,6 @@ export const StyledLink = styled.a`
     &:first-of-type {
       margin-right: 20px;
       background-color: ${theme.background.color2};
-      color: ${theme.fontColors.four};
       border-color: ${theme.background.color2};
     }
   `}

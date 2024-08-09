@@ -1,4 +1,5 @@
 import { FunctionComponent } from "react";
+import * as Styled from "./styles";
 
 interface ContacProps {
   title: string;
@@ -7,10 +8,10 @@ interface ContacProps {
 
 const Contac: FunctionComponent<ContacProps> = ({ title, body }) => {
   return (
-    <div>
+    <Styled.StyledContact>
       <h2>{title}</h2>
       <p>{body}</p>
-    </div>
+    </Styled.StyledContact>
   );
 };
 

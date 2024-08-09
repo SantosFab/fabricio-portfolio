@@ -9,7 +9,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    color: rgb(${({ theme }) => theme.background.color2});
+    color: ${({ theme }) => theme.fontColors.four};
     background-color: ${({ theme }) => theme.background.color2};
   }
 `;
