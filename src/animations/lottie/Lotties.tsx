@@ -27,8 +27,12 @@ const LottieAnimation = ({ animation }: { animation: animation }) => {
     <Styled.StyledLottie>
       <Lottie
         options={defaultOptions}
-        height={animation === "Flutter" ? 100 : 150}
-        width={animation === "Flutter" ? 100 : 150}
+        height={animation === "Flutter" ? 155 : 200}
+        width={animation === "Flutter" ? 155 : 200}
+        style={{
+          position: animation === "Flutter" ? "relative" : "static",
+          top: animation === "Flutter" ? "24px" : "",
+        }}
       />
     </Styled.StyledLottie>
   );

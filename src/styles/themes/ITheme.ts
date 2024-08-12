@@ -7,6 +7,7 @@ export interface ITheme {
     titleResponse: string;
     subTitleFixed: string;
     subTitleResponse: string;
+    titleH3: string;
     paragraphFixed: string;
     paragraphResponse: string;
   };
