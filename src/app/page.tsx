@@ -80,13 +80,14 @@ export default function Home() {
             animation={<LottieTools animation="Angular" />}
           />
           <Technology
-            title="React"
-            animation={<LottieTools animation="React" />}
-          />
-          <Technology
             title="Vue"
             animation={<LottieTools animation="VueJs" />}
           />
+          <Technology
+            title="React"
+            animation={<LottieTools animation="React" />}
+          />
+
           <Technology
             title="Next"
             animation={<LottieTools animation="NextJs" />}
@@ -98,7 +99,7 @@ export default function Home() {
         </div>
       </SessionContainer>{" "}
       <SessionContainer title="Entre em contato">
-        <div>test</div>
+        <div></div>
       </SessionContainer>
     </main>
   );

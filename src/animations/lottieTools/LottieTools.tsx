@@ -24,16 +24,10 @@ export const LottieTools = ({ animation }: { animation: animation }) => {
   };
 
   return (
-    <Styled.StyledLottieTools>
-      <Lottie
-        options={defaultOptions}
-        height={animation === "Flutter" ? 155 : 200}
-        width={animation === "Flutter" ? 155 : 200}
-        style={{
-          position: animation === "Flutter" ? "relative" : "static",
-          top: animation === "Flutter" ? "24px" : "",
-        }}
-      />
+    <Styled.StyledLottieTools
+      $isFlutter={animation === "Flutter" ? true : false}
+    >
+      <Lottie options={defaultOptions} />
     </Styled.StyledLottieTools>
   );
 };
