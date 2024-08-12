@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const StyledLottie = styled.div`
+export const StyledLottieTools = styled.div`
   ${({}) => css`
     pointer-events: none;
     width: 220px;

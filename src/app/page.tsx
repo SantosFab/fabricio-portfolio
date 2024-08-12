@@ -4,13 +4,14 @@ import * as Styled from "./styles";
 import Technology from "@/component/technology/Technology";
 import SessionContainer from "@/component/sessionContainer/SessionContainer";
 import { TitleAnimation } from "../animations/titleAnimation/TitleAnimation";
-import Lotties from "../animations/lottie/Lotties";
+import { LottieTools } from "../animations/lottieTools/LottieTools";
 import { faIdCard } from "@fortawesome/free-regular-svg-icons";
 import {
   faMobileScreenButton,
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { LottiesAstronaut } from "@/animations/lottieAstronaut/LottiesAstronaut";
 
 export default function Home() {
   return (
@@ -33,8 +34,8 @@ export default function Home() {
             </Styled.StyledLink>
           </div>
         </div>
-        <div className="hidden lg:flex w-1/2 justify-center items-center bg-slate-300 h-96">
-          IMAGEM FIC
+        <div className="hidden lg:flex w-1/2 justify-center items-center">
+          <LottiesAstronaut />
         </div>
       </SessionContainer>
       <SessionContainer title="Sobre mim">
@@ -44,7 +45,7 @@ export default function Home() {
           um tempo ferramentas Mobile, mas logo migrei para o desenvolvimento
           Web e aqui estou!
         </Styled.StyledParagraph>
-        <div className="flex justify-around flex-wrap w-full">
+        <div className="flex justify-around  flex-wrap w-full">
           <Contact
             title="Nome Completo"
             body="Fabrício dos Santos"
@@ -65,22 +66,34 @@ export default function Home() {
       </SessionContainer>
       <SessionContainer title="Ferramentas">
         <div className="flex flex-row flex-wrap justify-center">
-          <Technology title="HTML" animation={<Lotties animation="HTML" />} />
-          <Technology title="CSS" animation={<Lotties animation="CSS" />} />
+          <Technology
+            title="HTML"
+            animation={<LottieTools animation="HTML" />}
+          />
+          <Technology title="CSS" animation={<LottieTools animation="CSS" />} />
           <Technology
             title="JavaScript"
-            animation={<Lotties animation="JavaScript" />}
+            animation={<LottieTools animation="JavaScript" />}
           />
           <Technology
             title="Angular"
-            animation={<Lotties animation="Angular" />}
+            animation={<LottieTools animation="Angular" />}
           />
-          <Technology title="React" animation={<Lotties animation="React" />} />
-          <Technology title="Vue" animation={<Lotties animation="VueJs" />} />
-          <Technology title="Next" animation={<Lotties animation="NextJs" />} />
+          <Technology
+            title="React"
+            animation={<LottieTools animation="React" />}
+          />
+          <Technology
+            title="Vue"
+            animation={<LottieTools animation="VueJs" />}
+          />
+          <Technology
+            title="Next"
+            animation={<LottieTools animation="NextJs" />}
+          />
           <Technology
             title="Flutter"
-            animation={<Lotties animation="Flutter" />}
+            animation={<LottieTools animation="Flutter" />}
           />
         </div>
       </SessionContainer>{" "}

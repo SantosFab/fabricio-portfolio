@@ -26,5 +26,8 @@ export const StyledContact = styled.div`
     @media (max-width: 1024px) {
       margin: 20px;
     }
+    @media (max-width: 640px) {
+      width: 42%;
+    }
   `}
 `;

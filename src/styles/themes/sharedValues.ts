@@ -5,7 +5,7 @@ export const sharedValues = {
     subTitleFixed: "30px",
     subTitleResponse: "2.5vw",
     titleH3: "25px",
-    paragraphFixed: "16px",
-    paragraphResponse: "1.1vw",
+    paragraphFixed: "20px",
+    paragraphResponse: "1.4vw",
   },
 };
