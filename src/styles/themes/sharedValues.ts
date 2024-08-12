@@ -4,7 +4,8 @@ export const sharedValues = {
     titleResponse: "3vw",
     subTitleFixed: "30px",
     subTitleResponse: "2.5vw",
-    paragraphFixed: "16px",
-    paragraphResponse: "1.1vw",
+    titleH3: "25px",
+    paragraphFixed: "20px",
+    paragraphResponse: "1.2vw",
   },
 };

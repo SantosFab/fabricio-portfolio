@@ -13,7 +13,7 @@ type animation =
   | "Angular"
   | "VueJs";
 
-const LottieAnimation = ({ animation }: { animation: animation }) => {
+export const LottieTools = ({ animation }: { animation: animation }) => {
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -24,14 +24,10 @@ const LottieAnimation = ({ animation }: { animation: animation }) => {
   };
 
   return (
-    <Styled.StyledLottie>
-      <Lottie
-        options={defaultOptions}
-        height={animation === "Flutter" ? 100 : 150}
-        width={animation === "Flutter" ? 100 : 150}
-      />
-    </Styled.StyledLottie>
+    <Styled.StyledLottieTools
+      $isFlutter={animation === "Flutter" ? true : false}
+    >
+      <Lottie options={defaultOptions} />
+    </Styled.StyledLottieTools>
   );
 };
-
-export default LottieAnimation;

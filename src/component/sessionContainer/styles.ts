@@ -19,15 +19,15 @@ export const StyledSessionContainer = styled.div`
 `;
 
 export const StyledDiv = styled.div<{ $isColumn?: boolean }>`
-  ${({}) => css`
+  ${({ $isColumn = true }) => css`
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 40px;
     min-height: 85vh;
+    flex-direction: ${$isColumn ? "column" : "row"};
   `}
-  flex-direction: ${({ $isColumn = true }) => ($isColumn ? "column" : "row")};
 `;
 
 export const StyledTitle = styled.h2`

@@ -12,7 +12,7 @@ const Technology: FunctionComponent<TechnologyProps> = ({
 }) => {
   return (
     <Styled.StyledTechnology>
-      <p>{title}</p>
+      <h2>{title}</h2>
       {animation}
     </Styled.StyledTechnology>
   );
