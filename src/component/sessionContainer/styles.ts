@@ -3,14 +3,12 @@ import styled, { css } from "styled-components";
 export const StyledSessionContainer = styled.div`
   ${({ theme }) => css`
     color: ${theme.fontColors.four};
-    min-height: 85vh;
-
     &:first-of-type {
       height: calc(100vh - 70px);
     }
 
     &:nth-child(even) {
-      background-color: ${theme.background.color2};
+      background-color: ${theme.background.color3};
     }
     &:nth-child(odd) {
       background-color: ${theme.background.color1};
@@ -18,14 +16,19 @@ export const StyledSessionContainer = styled.div`
   `}
 `;
 
-export const StyledDiv = styled.div<{ $isColumn?: boolean }>`
-  ${({ $isColumn = true }) => css`
+interface StyledDivProps {
+  $isColumn?: boolean;
+  $isForm?: boolean;
+}
+
+export const StyledDiv = styled.div<StyledDivProps>`
+  ${({ $isColumn = true, $isForm = false }) => css`
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: ${$isForm ? "start" : "space-between"};
     padding: 40px;
-    min-height: 85vh;
+    min-height: ${$isColumn ? "75vh" : `calc(100vh - 70px)`};
     flex-direction: ${$isColumn ? "column" : "row"};
   `}
 `;

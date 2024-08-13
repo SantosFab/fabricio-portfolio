@@ -6,6 +6,7 @@ export const useMyFormik = () => {
   const schema = yup.object().shape({
     firstName: yup.string().required("Por favor, digite seu primeiro nome"),
     lastName: yup.string().required("Por favor, digite seu sobrenome"),
+    email: yup.string().required("Por favor, digite seu e-mail"),
     message: yup
       .string()
       .required("Por favor, digite a mensagem que deseja enviar"),
@@ -17,6 +18,7 @@ export const useMyFormik = () => {
     initialValues: {
       firstName: "",
       lastName: "",
+      email: "",
       message: "",
     },
     validationSchema: schema,

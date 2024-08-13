@@ -12,6 +12,7 @@ export const dark: ITheme = {
   },
   background: {
     color1: "#2E2D33",
-    color2: "#0C0B0D",
+    color2: "#484554",
+    color3: "#0C0B0D",
   },
 };

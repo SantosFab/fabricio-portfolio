@@ -54,8 +54,19 @@ export const StyledLink = styled.a`
 
     &:first-of-type {
       margin-right: 20px;
-      background-color: ${theme.background.color2};
-      border-color: ${theme.background.color2};
+      background-color: ${theme.background.color3};
+      border-color: ${theme.background.color3};
     }
+  `}
+`;
+
+export const StyledSubmit = styled.button`
+  ${({ theme }) => css`
+    width: 30%;
+    border-radius: 31px;
+    padding: 10px;
+    background-color: ${theme.background.color2};
+    margin: auto;
+    display: block;
   `}
 `;

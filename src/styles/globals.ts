@@ -10,7 +10,7 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     color: ${({ theme }) => theme.fontColors.four};
-    background-color: ${({ theme }) => theme.background.color2};
+    background-color: ${({ theme }) => theme.background.color3};
   }
 `;
 
