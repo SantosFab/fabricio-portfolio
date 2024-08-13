@@ -13,7 +13,7 @@ type animation =
   | "Angular"
   | "VueJs";
 
-export const LottieTools = ({ animation }: { animation: animation }) => {
+export const ToolsLottie = ({ animation }: { animation: animation }) => {
   const defaultOptions = {
     loop: true,
     autoplay: true,

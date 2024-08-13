@@ -3,7 +3,7 @@ import Lottie from "react-lottie";
 import animationData from "./Animation.json";
 import * as Styled from "./styles";
 
-export function LottiesAstronaut() {
+export function AstronautLottie() {
   const animation = "astronaut";
 
   const defaultOptions = {

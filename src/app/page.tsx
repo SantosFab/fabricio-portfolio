@@ -4,14 +4,14 @@ import * as Styled from "./styles";
 import Technology from "@/component/technology/Technology";
 import SessionContainer from "@/component/sessionContainer/SessionContainer";
 import { TitleAnimation } from "../animations/titleAnimation/TitleAnimation";
-import { LottieTools } from "../animations/lottieTools/LottieTools";
+import { ToolsLottie } from "../animations/toolsLottie/ToolsLottie";
 import { faIdCard } from "@fortawesome/free-regular-svg-icons";
 import {
   faMobileScreenButton,
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { LottiesAstronaut } from "@/animations/lottieAstronaut/LottiesAstronaut";
+import { AstronautLottie } from "@/animations/astronautLottie/AstronautLotties";
 
 export default function Home() {
   return (
@@ -35,7 +35,7 @@ export default function Home() {
           </div>
         </div>
         <div className="hidden lg:flex w-1/2 justify-center items-center">
-          <LottiesAstronaut />
+          <AstronautLottie />
         </div>
       </SessionContainer>
       <SessionContainer title="Sobre mim">
@@ -68,33 +68,33 @@ export default function Home() {
         <div className="flex flex-row flex-wrap justify-center">
           <Technology
             title="HTML"
-            animation={<LottieTools animation="HTML" />}
+            animation={<ToolsLottie animation="HTML" />}
           />
-          <Technology title="CSS" animation={<LottieTools animation="CSS" />} />
+          <Technology title="CSS" animation={<ToolsLottie animation="CSS" />} />
           <Technology
             title="JavaScript"
-            animation={<LottieTools animation="JavaScript" />}
+            animation={<ToolsLottie animation="JavaScript" />}
           />
           <Technology
             title="Angular"
-            animation={<LottieTools animation="Angular" />}
+            animation={<ToolsLottie animation="Angular" />}
           />
           <Technology
             title="Vue"
-            animation={<LottieTools animation="VueJs" />}
+            animation={<ToolsLottie animation="VueJs" />}
           />
           <Technology
             title="React"
-            animation={<LottieTools animation="React" />}
+            animation={<ToolsLottie animation="React" />}
           />
 
           <Technology
             title="Next"
-            animation={<LottieTools animation="NextJs" />}
+            animation={<ToolsLottie animation="NextJs" />}
           />
           <Technology
             title="Flutter"
-            animation={<LottieTools animation="Flutter" />}
+            animation={<ToolsLottie animation="Flutter" />}
           />
         </div>
       </SessionContainer>{" "}
