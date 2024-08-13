@@ -19,10 +19,8 @@ export default function Home() {
   const formik = useMyFormik();
 
   const formatPhoneNumber = (value: string) => {
-    // Remove caracteres não numéricos
     const cleaned = value.replace(/\D/g, "");
 
-    // Adiciona parênteses e hífen no formato desejado
     if (cleaned.length === 0) return "";
     if (cleaned.length <= 2) return `(${cleaned}`;
     if (cleaned.length <= 7)
