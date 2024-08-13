@@ -27,7 +27,7 @@ export const StyledNavegation = styled(Link)`
 export const StyledTitle = styled.h1`
   ${({ theme }) => css`
     font-size: ${theme.fontSize.titleResponse};
-    @media (max-width: 1024px) {
+    @media screen and (max-width: 1024px) {
       font-size: ${theme.fontSize.titleFixed};
     }
   `}
@@ -39,7 +39,7 @@ export const StyledParagraph = styled.div`
     text-align: center;
   `}
 
-  @media (max-width: 1024px) {
+  @media screen and (max-width: 1024px) {
     font-size: ${({ theme }) => theme.fontSize.paragraphFixed};
   }
 `;

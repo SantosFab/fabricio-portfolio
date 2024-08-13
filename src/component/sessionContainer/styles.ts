@@ -37,7 +37,7 @@ export const StyledTitle = styled.h2`
   ${({ theme }) => css`
     padding-bottom: 40px;
     font-size: ${theme.fontSize.subTitleResponse};
-    @media (max-width: 1024px) {
+    @media screen and (max-width: 1024px) {
       font-size: ${theme.fontSize.subTitleFixed};
     }
   `}

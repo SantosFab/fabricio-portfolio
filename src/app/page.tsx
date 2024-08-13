@@ -17,6 +17,27 @@ import { FormField } from "@/component/formField/FormField";
 
 export default function Home() {
   const formik = useMyFormik();
+
+  const formatPhoneNumber = (value: string) => {
+    // Remove caracteres não numéricos
+    const cleaned = value.replace(/\D/g, "");
+
+    // Adiciona parênteses e hífen no formato desejado
+    if (cleaned.length === 0) return "";
+    if (cleaned.length <= 2) return `(${cleaned}`;
+    if (cleaned.length <= 7)
+      return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2)}`;
+    return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2, 7)}-${cleaned.slice(
+      7,
+      11
+    )}`;
+  };
+
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const formattedPhone = formatPhoneNumber(e.target.value);
+    formik.setFieldValue("phone", formattedPhone);
+  };
+
   return (
     <main className="">
       <SessionContainer isColumn={false}>
@@ -103,7 +124,7 @@ export default function Home() {
       </SessionContainer>
       <SessionContainer title="Entre em contato" isForm={true}>
         <form onSubmit={formik.handleSubmit} className="w-3/4">
-          <div className="flex justify-between">
+          <div className="flex flex-col lg:flex-row justify-between">
             <FormField
               name="firstName"
               type="text"
@@ -112,7 +133,6 @@ export default function Home() {
               onChange={formik.handleChange}
               touched={formik.touched.firstName}
               errorMessage={formik.errors.firstName}
-              widthFiftyPercent={true}
             />
 
             <FormField
@@ -123,22 +143,32 @@ export default function Home() {
               onChange={formik.handleChange}
               touched={formik.touched.lastName}
               errorMessage={formik.errors.lastName}
-              widthFiftyPercent={true}
+            />
+          </div>
+          <div className="flex flex-col lg:flex-row justify-between">
+            <FormField
+              name="email"
+              type="email"
+              placeHolder="Digite seu e-mail para contato"
+              value={formik.values.email}
+              onChange={formik.handleChange}
+              touched={formik.touched.email}
+              errorMessage={formik.errors.email}
+            />
+            <FormField
+              name="phone"
+              type="tel"
+              placeHolder="(xx) xxxxx-xxxx"
+              value={formik.values.phone}
+              onChange={handlePhoneChange}
+              touched={formik.touched.phone}
+              errorMessage={formik.errors.phone}
             />
           </div>
           <FormField
-            name="email"
-            type="email"
-            placeHolder="Digite seu e-mail"
-            value={formik.values.email}
-            onChange={formik.handleChange}
-            touched={formik.touched.email}
-            errorMessage={formik.errors.email}
-          />
-
-          <FormField
             touched={formik.touched.message}
             errorMessage={formik.errors.message}
+            oneHundredPercent={true}
           >
             <textarea
               id="message"

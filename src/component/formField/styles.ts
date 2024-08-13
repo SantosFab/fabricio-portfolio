@@ -1,19 +1,20 @@
 import styled, { css } from "styled-components";
 
 interface StyledFromFieldProps {
-  $widthFiftyPercent?: boolean;
+  $oneHundredPercent?: boolean;
 }
 
 export const StyledFormField = styled.div<StyledFromFieldProps>`
-  ${({ $widthFiftyPercent = false, theme }) => css`
+  ${({ $oneHundredPercent = false, theme }) => css`
     display: flex;
     flex-direction: column;
-    width: ${$widthFiftyPercent ? "45%" : ""};
+    width: ${$oneHundredPercent ? "100%" : "47%"};
 
     & input:focus,
     textarea:focus {
       outline: none;
-      box-shadow: none; /* Remove qualquer sombra padrão no foco */
+      box-shadow: none;
+      background-color: ${theme.background.color2};
     }
 
     & small {
@@ -32,6 +33,10 @@ export const StyledFormField = styled.div<StyledFromFieldProps>`
       background-color: ${theme.background.color1};
       border-radius: 31px;
       padding: 10px 15px;
+    }
+
+    @media (max-width: 1024px) {
+      width: 100%;
     }
   `}
 `;

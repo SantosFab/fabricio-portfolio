@@ -9,7 +9,7 @@ interface FormFieldProps {
   children?: ReactNode;
   value?: string;
   placeHolder?: string;
-  widthFiftyPercent?: boolean;
+  oneHundredPercent?: boolean;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
@@ -21,11 +21,11 @@ export const FormField: FunctionComponent<FormFieldProps> = ({
   children,
   value,
   placeHolder,
-  widthFiftyPercent,
+  oneHundredPercent,
   onChange,
 }) => {
   return (
-    <Styled.StyledFormField $widthFiftyPercent={widthFiftyPercent}>
+    <Styled.StyledFormField $oneHundredPercent={oneHundredPercent}>
       {children ? (
         children
       ) : (
