@@ -1,6 +1,6 @@
 "use client";
-import Contact from "@/component/contact/Contact";
 import * as Styled from "./styles";
+import Contact from "@/component/contact/Contact";
 import Technology from "@/component/technology/Technology";
 import SessionContainer from "@/component/sessionContainer/SessionContainer";
 import { TitleAnimation } from "../animations/titleAnimation/TitleAnimation";
@@ -12,8 +12,10 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { AstronautLottie } from "@/animations/astronautLottie/AstronautLotties";
+import { useMyFormik } from "@/hook/formik/useMyFormik";
 
 export default function Home() {
+  const formik = useMyFormik();
   return (
     <main className="">
       <SessionContainer isColumn={false}>
@@ -97,9 +99,49 @@ export default function Home() {
             animation={<ToolsLottie animation="Flutter" />}
           />
         </div>
-      </SessionContainer>{" "}
+      </SessionContainer>
       <SessionContainer title="Entre em contato">
-        <div></div>
+        <form onSubmit={formik.handleSubmit}>
+          <label htmlFor="firstName">Nome</label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            onChange={formik.handleChange}
+            value={formik.values.firstName}
+          />
+          <small className="block h-2 ">
+            {formik.touched.firstName && formik.errors.firstName
+              ? formik.errors.firstName
+              : null}
+          </small>
+          <label htmlFor="lastName">Sobrenome</label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            onChange={formik.handleChange}
+            value={formik.values.lastName}
+          />
+          <small className="block h-2 ">
+            {formik.touched.firstName && formik.errors.firstName
+              ? formik.errors.firstName
+              : null}
+          </small>
+          <label htmlFor="message">Mensagem</label>
+          <textarea
+            id="message"
+            name="message"
+            onChange={formik.handleChange}
+            value={formik.values.message}
+          />
+          <small className="block h-2 ">
+            {formik.touched.firstName && formik.errors.firstName
+              ? formik.errors.firstName
+              : null}
+          </small>
+          <button type="submit">Submit</button>
+        </form>
       </SessionContainer>
     </main>
   );
