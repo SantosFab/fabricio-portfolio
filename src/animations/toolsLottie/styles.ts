@@ -7,16 +7,20 @@ interface LottieToolsProps {
 export const StyledLottieTools = styled.div<LottieToolsProps>`
   ${({ $isFlutter = false }) => css`
     pointer-events: none;
-    width: ${$isFlutter ? "115px" : "190x"};
-    height: ${$isFlutter ? "115px" : "190px"};
+    width: 150px;
+    height: 150px;
+    width: ${$isFlutter && "120px"};
+    height: ${$isFlutter && "120px"};
 
     position: ${$isFlutter ? "relative" : "static"};
-    top: ${$isFlutter ? "40px" : ""};
+    top: ${$isFlutter ? "20px" : ""};
 
-    ,
     @media screen and (max-width: 1280px) {
-      width: ${$isFlutter ? "105px" : "150px"};
-      height: ${$isFlutter ? "105px" : "150px"};
+      width: 100px;
+      height: 100px;
+      width: ${$isFlutter && "80px"};
+      height: ${$isFlutter && "80px"};
+      top: ${$isFlutter ? "15px" : ""};
     }
   `}
 `;

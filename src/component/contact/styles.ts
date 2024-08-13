@@ -23,10 +23,10 @@ export const StyledContact = styled.div`
       font-size: 40px;
     }
 
-    @media (max-width: 1024px) {
+    @media screen and (max-width: 1024px) {
       margin: 20px;
     }
-    @media (max-width: 640px) {
+    @media screen and (max-width: 640px) {
       width: 42%;
     }
   `}

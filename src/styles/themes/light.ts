@@ -11,7 +11,8 @@ export const light: ITheme = {
     four: "#2c3e50",
   },
   background: {
-    color1: "#E0EBFF",
-    color2: "#CCDDE8",
+    color1: "#EDFDFF",
+    color2: "#E0FFF2",
+    color3: "#CCE8E4",
   },
 };
