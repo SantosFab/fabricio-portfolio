@@ -8,7 +8,7 @@ interface SessionContainerProps {
   title?: string;
 }
 
-const SessionContainer: FunctionComponent<SessionContainerProps> = ({
+export const SessionContainer: FunctionComponent<SessionContainerProps> = ({
   children,
   title,
   isColumn,
@@ -27,5 +27,3 @@ const SessionContainer: FunctionComponent<SessionContainerProps> = ({
     </Styled.StyledSessionContainer>
   );
 };
-
-export default SessionContainer;

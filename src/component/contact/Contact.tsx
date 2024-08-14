@@ -8,18 +8,34 @@ interface ContacProps {
   title: string;
   body: string;
   icon: IconDefinition;
+  href?: string;
 }
 
-const Contac: FunctionComponent<ContacProps> = ({ title, body, icon }) => {
+export const Contact: FunctionComponent<ContacProps> = ({
+  title,
+  body,
+  icon,
+  href,
+}) => {
   return (
     <Styled.StyledContact>
-      <div>
-        <FontAwesomeIcon icon={icon} />
-      </div>
-      <h2>{title}</h2>
-      <p>{body}</p>
+      {href ? (
+        <a href={href} target="_blank">
+          <div>
+            <FontAwesomeIcon icon={icon} />
+          </div>
+          <h2>{title}</h2>
+          <p>{body}</p>
+        </a>
+      ) : (
+        <>
+          <div>
+            <FontAwesomeIcon icon={icon} />
+          </div>
+          <h2>{title}</h2>
+          <p>{body}</p>
+        </>
+      )}
     </Styled.StyledContact>
   );
 };
-
-export default Contac;

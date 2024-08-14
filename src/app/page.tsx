@@ -1,8 +1,8 @@
 "use client";
 import * as Styled from "./styles";
-import Contact from "@/component/contact/Contact";
-import Technology from "@/component/technology/Technology";
-import SessionContainer from "@/component/sessionContainer/SessionContainer";
+import { Contact } from "@/component/contact/Contact";
+import { Technology } from "@/component/technology/Technology";
+import { SessionContainer } from "@/component/sessionContainer/SessionContainer";
 import { TitleAnimation } from "../animations/titleAnimation/TitleAnimation";
 import { ToolsLottie } from "../animations/toolsLottie/ToolsLottie";
 import { faIdCard } from "@fortawesome/free-regular-svg-icons";
@@ -10,7 +10,7 @@ import {
   faMobileScreenButton,
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { AstronautLottie } from "@/animations/astronautLottie/AstronautLotties";
 import { useMyFormik } from "@/hook/formik/useMyFormik";
 import { FormField } from "@/component/formField/FormField";
@@ -82,8 +82,20 @@ export default function Home() {
             title="Telefone de Contato"
             body="(79) 99672-9791"
             icon={faMobileScreenButton}
+            href="https://contate.me/developerfabriciosantos"
           />
-          <Contact title="GitHub" body="@SantosFab" icon={faGithub} />
+          <Contact
+            title="GitHub"
+            body="@SantosFab"
+            icon={faGithub}
+            href="https://github.com/SantosFab"
+          />
+          <Contact
+            title="LinkedIn"
+            body="@fabriciosantosdev"
+            icon={faLinkedin}
+            href="https://www.linkedin.com/in/fabriciosantosdev/"
+          />
           <Contact
             title="E-mail"
             body="fabriciosantos.dev@gmail.com"

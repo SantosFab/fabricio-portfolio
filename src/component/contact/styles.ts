@@ -8,6 +8,12 @@ export const StyledContact = styled.div`
     margin: 0 20px;
     border-radius: 50%;
 
+    & a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     & div {
       display: flex;
       justify-content: center;
@@ -23,7 +29,7 @@ export const StyledContact = styled.div`
       font-size: 40px;
     }
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1280px) {
       margin: 20px;
     }
     @media screen and (max-width: 640px) {

@@ -6,7 +6,7 @@ interface TechnologyProps {
   animation?: ReactNode;
 }
 
-const Technology: FunctionComponent<TechnologyProps> = ({
+export const Technology: FunctionComponent<TechnologyProps> = ({
   title,
   animation,
 }) => {
@@ -17,5 +17,3 @@ const Technology: FunctionComponent<TechnologyProps> = ({
     </Styled.StyledTechnology>
   );
 };
-
-export default Technology;
