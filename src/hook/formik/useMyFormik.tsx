@@ -1,4 +1,5 @@
 "use client";
+import { handleSubmit } from "@/fetch/handleSubmit";
 import { useFormik } from "formik";
 import * as yup from "yup";
 
@@ -29,8 +30,13 @@ export const useMyFormik = () => {
       message: "",
     },
     validationSchema: schema,
-    onSubmit(values, { resetForm }) {
-      console.log("Está funcionando ", values);
+    onSubmit: async (values, { resetForm }) => {
+      try {
+        await handleSubmit({ ...values });
+        resetForm();
+      } catch (error) {
+        console.error("Erro ao enviar o email:", error);
+      }
     },
   });
 
