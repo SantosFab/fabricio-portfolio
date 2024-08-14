@@ -40,9 +40,7 @@ export default function Home() {
     <main className="">
       <SessionContainer isColumn={false}>
         <div className="w-full lg:w-1/2 flex flex-col justify-center items-start">
-          <Styled.StyledTitle>
-            <TitleAnimation />
-          </Styled.StyledTitle>
+          <TitleAnimation />
           <Styled.StyledParagraph>
             Desenvolvedor Front-end com foco em desenvolvimento Web
           </Styled.StyledParagraph>

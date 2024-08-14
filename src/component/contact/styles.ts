@@ -19,14 +19,14 @@ export const StyledContact = styled.div`
       justify-content: center;
       align-items: center;
       background-color: ${theme.background.color1};
-      width: 110px;
-      height: 110px;
+      width: 90px;
+      height: 90px;
       border-radius: 50%;
       margin-bottom: 10px;
     }
 
     & SVG {
-      font-size: 40px;
+      font-size: 30px;
     }
 
     @media screen and (max-width: 1280px) {
