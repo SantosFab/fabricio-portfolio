@@ -47,7 +47,12 @@ export default function Home() {
             Desenvolvedor Front-end com foco em desenvolvimento Web
           </Styled.StyledParagraph>
           <div>
-            <Styled.StyledLink>Dowload CV</Styled.StyledLink>
+            <Styled.StyledLink
+              href="/documents/Currículo-Fabrício_Santos.pdf"
+              download
+            >
+              Dowload CV
+            </Styled.StyledLink>
             <Styled.StyledLink
               href="https://www.linkedin.com/in/fabriciosantosdev/"
               target="_blank"
