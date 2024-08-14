@@ -14,22 +14,10 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { AstronautLottie } from "@/animations/astronautLottie/AstronautLotties";
 import { useMyFormik } from "@/hook/formik/useMyFormik";
 import { FormField } from "@/component/formField/FormField";
+import { formatPhoneNumber } from "./script";
 
 export default function Home() {
   const formik = useMyFormik();
-
-  const formatPhoneNumber = (value: string) => {
-    const cleaned = value.replace(/\D/g, "");
-
-    if (cleaned.length === 0) return "";
-    if (cleaned.length <= 2) return `(${cleaned}`;
-    if (cleaned.length <= 7)
-      return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2)}`;
-    return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2, 7)}-${cleaned.slice(
-      7,
-      11
-    )}`;
-  };
 
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const formattedPhone = formatPhoneNumber(e.target.value);
@@ -37,7 +25,7 @@ export default function Home() {
   };
 
   return (
-    <main className="">
+    <>
       <SessionContainer isColumn={false}>
         <div className="w-full lg:w-1/2 flex flex-col justify-center items-start">
           <TitleAnimation />
@@ -195,6 +183,6 @@ export default function Home() {
           <Styled.StyledSubmit type="submit">Enviar</Styled.StyledSubmit>
         </form>
       </SessionContainer>
-    </main>
+    </>
   );
 }

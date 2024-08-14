@@ -9,7 +9,7 @@ import "../styles/tailwinds.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Portfólio",
+  title: "Dev - Fabrício Santos",
   description: "Portfólio do desenvolvedor Fabrício Santos",
 };
 
@@ -27,12 +27,12 @@ export default function RootLayout({
               <Styled.StyledNavegation href={"/"}>
                 Início
               </Styled.StyledNavegation>
-              <Styled.StyledNavegation href={"/"}>
+              <Styled.StyledNavegation href={"/Project"}>
                 Projeto
               </Styled.StyledNavegation>
               <Input />
             </Styled.StyledNav>
-            {children}
+            <main>{children}</main>
           </ThemeProvider>
         </StyledComponentsRegistry>
       </body>

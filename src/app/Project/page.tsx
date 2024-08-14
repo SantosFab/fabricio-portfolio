@@ -1,3 +1,10 @@
+"use client";
+import { SessionContainer } from "@/component/sessionContainer/SessionContainer";
+
 export default function Page() {
-  return <h1>Hello, Project page!</h1>;
+  return (
+    <SessionContainer>
+      <div> test</div>
+    </SessionContainer>
+  );
 }
