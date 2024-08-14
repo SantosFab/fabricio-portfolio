@@ -13,7 +13,6 @@ import {
   initialState,
   themeReducer,
 } from "./ThemeReducer";
-import { usePersistedState } from "@/utils/usePersistedState";
 
 interface IThemeContextProps {
   state: IInitialState;

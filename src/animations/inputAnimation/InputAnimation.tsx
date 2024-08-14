@@ -1,7 +1,7 @@
 "use client";
 import { useTheme } from "@/reducer/Theme/ThemeProvider";
 import { ThemeType } from "@/styles/themes/ITheme";
-import { usePersistedState } from "@/utils/usePersistedState";
+import { usePersistedState } from "@/hook/persistedState/usePersistedState";
 import { FunctionComponent, useLayoutEffect } from "react";
 import * as Styled from "./styles";
 

@@ -2,7 +2,6 @@
 import { light } from "@/styles/themes/light";
 import { dark } from "@/styles/themes/dark";
 import { ITheme } from "@/styles/themes/ITheme";
-import { usePersistedState } from "@/utils/usePersistedState";
 
 export type Action = { type: "TOGGLE_THEME" };
 
