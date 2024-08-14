@@ -123,7 +123,7 @@ export default function Home() {
           />
         </div>
       </SessionContainer>
-      <SessionContainer title="Entre em contato" isForm={true}>
+      <SessionContainer title="Entre em contato" isJustifyStart={true}>
         <form onSubmit={formik.handleSubmit} className="w-3/4">
           <div className="flex flex-col lg:flex-row justify-between">
             <FormField

@@ -18,15 +18,20 @@ export const StyledSessionContainer = styled.div`
 
 interface StyledDivProps {
   $isColumn?: boolean;
-  $isForm?: boolean;
+  $isJustifyStart?: boolean;
+  $isAlignStart?: boolean;
 }
 
 export const StyledDiv = styled.div<StyledDivProps>`
-  ${({ $isColumn = true, $isForm = false }) => css`
+  ${({
+    $isColumn = true,
+    $isJustifyStart = false,
+    $isAlignStart = false,
+  }) => css`
     display: flex;
-    align-items: center;
+    align-items: ${$isAlignStart ? "start" : "center"};
     flex-wrap: wrap;
-    justify-content: ${$isForm ? "start" : "space-between"};
+    justify-content: ${$isJustifyStart ? "start" : "space-between"};
     padding: 40px;
     min-height: ${$isColumn ? "75vh" : `calc(100vh - 70px)`};
     flex-direction: ${$isColumn ? "column" : "row"};
