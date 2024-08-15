@@ -13,10 +13,7 @@ export const StyledProjectContainer = styled.div`
     border-radius: 10px;
     position: relative;
 
-    & > div:first-of-type {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    & img {
       height: 40%;
       width: 100%;
       border-radius: 10px 10px 0 0;

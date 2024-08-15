@@ -1,14 +1,34 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useState } from "react";
 import * as Styled from "./styles";
+import { Modal } from "@/component/modal/ImageModal";
+import Image from "next/image";
 
 interface ProjectContainerProps {}
 
 export const ProjectContainer: FunctionComponent<
   ProjectContainerProps
 > = ({}) => {
+  const [isModalOpen, setModalOpen] = useState(false);
+  const images = ["/img/img1.jpg", "/img/img2.jpeg", "/img/img3.jpeg"];
+
+  const handleImageClick = () => {
+    setModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setModalOpen(false);
+  };
+
   return (
     <Styled.StyledProjectContainer>
-      <div>IMG do projeto</div>
+      <Image
+        src="/img/img1.jpg"
+        alt="Imagem do projeto"
+        width={300}
+        height={200}
+        priority
+        onClick={handleImageClick}
+      />
       <Styled.StyledBody>
         <h2>Nome do projeto</h2>
         <p>
@@ -21,6 +41,8 @@ export const ProjectContainer: FunctionComponent<
         <Styled.StyledLink href="#preview">Preview</Styled.StyledLink>
         <Styled.StyledLink href="#github">Github</Styled.StyledLink>
       </Styled.LinksContainer>
+
+      <Modal isOpen={isModalOpen} onClose={handleCloseModal} images={images} />
     </Styled.StyledProjectContainer>
   );
 };
