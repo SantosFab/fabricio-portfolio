@@ -3,8 +3,8 @@ import * as Styled from "./styles";
 import { Contact } from "@/component/contact/Contact";
 import { Technology } from "@/component/technology/Technology";
 import { SessionContainer } from "@/component/sessionContainer/SessionContainer";
-import { TitleAnimation } from "../animations/titleAnimation/TitleAnimation";
-import { ToolsLottie } from "../animations/toolsLottie/ToolsLottie";
+import { TitleAnimation } from "@/animations/titleAnimation/TitleAnimation";
+import { ToolsLottie } from "@/animations/toolsLottie/ToolsLottie";
 import { faIdCard } from "@fortawesome/free-regular-svg-icons";
 import {
   faMobileScreenButton,

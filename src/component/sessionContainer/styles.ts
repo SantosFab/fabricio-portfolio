@@ -4,7 +4,7 @@ export const StyledSessionContainer = styled.div`
   ${({ theme }) => css`
     color: ${theme.fontColors.four};
     &:first-of-type {
-      height: calc(100vh - 70px);
+      min-height: calc(100vh - 70px);
     }
 
     &:nth-child(even) {

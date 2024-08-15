@@ -1,16 +1,18 @@
 "use client";
+import { ProjectContainer } from "@/component/projectContainer/ProjectContainer";
 import * as Styled from "./styles";
-import { SessionContainer } from "@/component/sessionContainer/SessionContainer";
 
-export default function Page() {
+export default function Project() {
   return (
-    <SessionContainer
-      isColumn={false}
-      isAlignStart={true}
-      isJustifyStart={true}
-    >
-      <div> test</div>
-      <div> test</div>
-    </SessionContainer>
+    <Styled.StyledProject>
+      <div className="container">
+        <ProjectContainer />
+        <ProjectContainer />
+        <ProjectContainer />
+        <ProjectContainer />
+        <ProjectContainer />
+        <ProjectContainer />
+      </div>
+    </Styled.StyledProject>
   );
 }
