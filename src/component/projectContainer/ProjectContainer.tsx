@@ -1,15 +1,24 @@
 import { FunctionComponent, useState } from "react";
 import * as Styled from "./styles";
 import { Modal } from "@/component/modal/ImageModal";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
-interface ProjectContainerProps {}
+interface ProjectContainerProps {
+  body: string;
+  hrefGit: string;
+  hrefPreview: string;
+  images: StaticImageData[];
+  title: string;
+}
 
-export const ProjectContainer: FunctionComponent<
-  ProjectContainerProps
-> = ({}) => {
+export const ProjectContainer: FunctionComponent<ProjectContainerProps> = ({
+  body,
+  hrefGit,
+  hrefPreview,
+  images,
+  title,
+}) => {
   const [isModalOpen, setModalOpen] = useState(false);
-  const images = ["/img/img1.jpg", "/img/img2.jpeg", "/img/img3.jpeg"];
 
   const handleImageClick = () => {
     setModalOpen(true);
@@ -22,24 +31,19 @@ export const ProjectContainer: FunctionComponent<
   return (
     <Styled.StyledProjectContainer>
       <Image
-        src="/img/img1.jpg"
+        src={images[0]}
         alt="Imagem do projeto"
-        width={300}
-        height={200}
         priority
+        quality={50}
         onClick={handleImageClick}
       />
       <Styled.StyledBody>
-        <h2>Nome do projeto</h2>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industrys standard dummy text ever
-          since the 1500s.
-        </p>
+        <h2>{title}</h2>
+        <p>{body}</p>
       </Styled.StyledBody>
       <Styled.LinksContainer>
-        <Styled.StyledLink href="#preview">Preview</Styled.StyledLink>
-        <Styled.StyledLink href="#github">Github</Styled.StyledLink>
+        <Styled.StyledLink href={hrefPreview}>Preview</Styled.StyledLink>
+        <Styled.StyledLink href={hrefGit}>Github</Styled.StyledLink>
       </Styled.LinksContainer>
 
       <Modal isOpen={isModalOpen} onClose={handleCloseModal} images={images} />

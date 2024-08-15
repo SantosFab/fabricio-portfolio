@@ -1,7 +1,6 @@
 import styled, { css } from "styled-components";
 import { StyledLink as ExternalStyledLink } from "@/app/styles";
 
-// Container principal do projeto
 export const StyledProjectContainer = styled.div`
   ${({ theme }) => css`
     width: 24%;
@@ -18,6 +17,7 @@ export const StyledProjectContainer = styled.div`
       width: 100%;
       border-radius: 10px 10px 0 0;
       background-color: red;
+      cursor: pointer;
     }
 
     & > div:last-of-type:hover {
@@ -26,7 +26,6 @@ export const StyledProjectContainer = styled.div`
   `}
 `;
 
-// Corpo do projeto com título e descrição
 export const StyledBody = styled.div`
   ${({}) => css`
     display: flex;
@@ -46,7 +45,6 @@ export const StyledBody = styled.div`
   `}
 `;
 
-// Estilização dos links
 export const StyledLink = styled(ExternalStyledLink)`
   ${({ theme }) => css``}
 `;

@@ -6,7 +6,7 @@ export const ModalOverlay = styled.div`
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.8); /* Fundo mais escuro para destacar a imagem */
+  background: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;

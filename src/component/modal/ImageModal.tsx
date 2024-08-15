@@ -1,11 +1,11 @@
 import { FunctionComponent, useState } from "react";
 import * as Styled from "./styles";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
-  images: string[];
+  images: StaticImageData[];
 }
 
 export const Modal: FunctionComponent<ModalProps> = ({
@@ -41,13 +41,7 @@ export const Modal: FunctionComponent<ModalProps> = ({
         {"<"}
       </Styled.NavigationButton>
       <Styled.ModalContent>
-        <Image
-          src={images[currentIndex]}
-          alt={`Imagem ${currentIndex + 1}`}
-          width={1600}
-          height={900}
-          style={{ maxWidth: "100%", maxHeight: "100%" }}
-        />
+        <Image src={images[currentIndex]} alt={`Imagem ${currentIndex + 1}`} />
       </Styled.ModalContent>
       <Styled.NavigationButton onClick={handleNextImage}>
         {">"}
