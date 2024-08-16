@@ -1,7 +1,7 @@
 "use client";
 import axios from "axios";
 
-interface IHandleSubmitProps {
+interface HandleSubmitProps {
   firstName: string;
   lastName: string;
   email: string;
@@ -15,7 +15,7 @@ export const handleSubmit = async ({
   email,
   phone,
   message,
-}: IHandleSubmitProps) => {
+}: HandleSubmitProps) => {
   try {
     const response = await axios.post("/api/send-email", {
       firstName,

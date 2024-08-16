@@ -1,7 +1,7 @@
-import { ITheme } from "./ITheme";
+import { Theme } from "./ITheme";
 import { sharedValues } from "./sharedValues";
 
-export const light: ITheme = {
+export const light: Theme = {
   title: "light",
   ...sharedValues,
   fontColors: {

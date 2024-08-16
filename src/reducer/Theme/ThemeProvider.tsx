@@ -9,13 +9,13 @@ import {
 } from "react";
 import {
   Action,
-  IInitialState,
+  InitialState,
   initialState,
   themeReducer,
 } from "./ThemeReducer";
 
-interface IThemeContextProps {
-  state: IInitialState;
+interface ThemeContextProps {
+  state: InitialState;
   dispatch: Dispatch<Action>;
 }
 
@@ -23,7 +23,7 @@ interface ThemeProviderProps {
   children: ReactNode;
 }
 
-const ThemeContext = createContext<IThemeContextProps | undefined>(undefined);
+const ThemeContext = createContext<ThemeContextProps | undefined>(undefined);
 
 export const useTheme = () => {
   const context = useContext(ThemeContext);

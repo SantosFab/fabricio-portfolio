@@ -1,6 +1,6 @@
 export type ThemeType = "light" | "dark";
 
-export interface ITheme {
+export interface Theme {
   title: ThemeType;
   fontSize: {
     titleFixed: string;

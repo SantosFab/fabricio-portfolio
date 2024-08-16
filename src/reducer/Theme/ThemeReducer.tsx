@@ -1,19 +1,19 @@
 "use client";
 import { light } from "@/styles/themes/light";
 import { dark } from "@/styles/themes/dark";
-import { ITheme } from "@/styles/themes/ITheme";
+import { Theme } from "@/styles/themes/ITheme";
 
 export type Action = { type: "TOGGLE_THEME" };
 
-export interface IInitialState {
-  theme: ITheme;
+export interface InitialState {
+  theme: Theme;
 }
 
-export const initialState: IInitialState = {
+export const initialState: InitialState = {
   theme: light,
 };
 
-export const themeReducer = (state: IInitialState, action: Action) => {
+export const themeReducer = (state: InitialState, action: Action) => {
   switch (action.type) {
     case "TOGGLE_THEME":
       return {
