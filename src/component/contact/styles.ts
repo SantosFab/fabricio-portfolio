@@ -32,8 +32,5 @@ export const StyledContact = styled.div`
     @media screen and (max-width: 1280px) {
       margin: 20px;
     }
-    @media screen and (max-width: 640px) {
-      width: 42%;
-    }
   `}
 `;

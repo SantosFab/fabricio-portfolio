@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const StyledTechnology = styled.h3`
+export const StyledTechnology = styled.div`
   ${({ theme }) => css`
     width: 200px;
     display: flex;

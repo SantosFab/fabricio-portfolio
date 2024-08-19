@@ -8,7 +8,7 @@ export const StyledProjectContainer = styled.div`
     margin-right: 0.5%;
     margin-bottom: 1%;
     height: 400px;
-    background-color: ${theme.background.layout.dark};
+    background-color: ${theme.background.container.dark};
     border-radius: 10px;
     position: relative;
 

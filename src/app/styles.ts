@@ -56,8 +56,12 @@ export const StyledSubmit = styled.button`
     width: 30%;
     border-radius: 31px;
     padding: 10px;
-    background-color: ${theme.background.layout.light};
+    background-color: ${theme.background.container.light};
     margin: auto;
     display: block;
+
+    &:hover {
+      background-color: ${theme.background.container.dark};
+    }
   `}
 `;

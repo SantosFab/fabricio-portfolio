@@ -16,8 +16,8 @@ export const light: Theme = {
       light: "#E0FFF2",
     },
     container: {
-      dark: "#E0EBFF",
-      light: "#EDFDFF",
+      dark: "#CCDDE8",
+      light: "#E0EBFF",
     },
   },
 };
