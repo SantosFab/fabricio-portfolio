@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const StyledTechnology = styled.div`
+export const StyledTechnology = styled.h3`
   ${({ theme }) => css`
     width: 200px;
     display: flex;
@@ -8,7 +8,7 @@ export const StyledTechnology = styled.div`
     align-items: center;
     margin: 20px;
     & h2 {
-      font-size: ${theme.fontSize.titleH3};
+      font-size: ${theme.fontSize.h3.fixed};
     }
   `}
 `;

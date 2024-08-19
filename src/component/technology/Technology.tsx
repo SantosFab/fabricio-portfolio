@@ -12,7 +12,7 @@ export const Technology: FunctionComponent<TechnologyProps> = ({
 }) => {
   return (
     <Styled.StyledTechnology>
-      <h2>{title}</h2>
+      <h3>{title}</h3>
       {animation}
     </Styled.StyledTechnology>
   );

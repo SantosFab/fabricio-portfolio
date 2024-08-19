@@ -2,6 +2,7 @@ import { FunctionComponent, useState } from "react";
 import * as Styled from "./styles";
 import { Modal } from "@/component/modal/ImageModal";
 import Image, { StaticImageData } from "next/image";
+import { TagContainer } from "../tagContainer/TagContainer";
 
 interface ProjectContainerProps {
   body: string;
@@ -39,6 +40,15 @@ export const ProjectContainer: FunctionComponent<ProjectContainerProps> = ({
       />
       <Styled.StyledBody>
         <h2>{title}</h2>
+        <Styled.StyledTag>
+          <TagContainer tag="CSS"></TagContainer>
+          <TagContainer tag="CSS"></TagContainer>
+          <TagContainer tag="CSS"></TagContainer>
+          <TagContainer tag="CSS"></TagContainer>
+          <TagContainer tag="NextJs"></TagContainer>
+          <TagContainer tag="NextJs"></TagContainer>
+          <TagContainer tag="NextJs"></TagContainer>
+        </Styled.StyledTag>
         <p>{body}</p>
       </Styled.StyledBody>
       <Styled.LinksContainer>

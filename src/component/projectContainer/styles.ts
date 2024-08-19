@@ -8,7 +8,7 @@ export const StyledProjectContainer = styled.div`
     margin-right: 0.5%;
     margin-bottom: 1%;
     height: 400px;
-    background-color: ${theme.background.color2};
+    background-color: ${theme.background.layout.dark};
     border-radius: 10px;
     position: relative;
 
@@ -16,7 +16,6 @@ export const StyledProjectContainer = styled.div`
       height: 40%;
       width: 100%;
       border-radius: 10px 10px 0 0;
-      background-color: red;
       cursor: pointer;
     }
 
@@ -30,7 +29,7 @@ export const StyledBody = styled.div`
   ${({}) => css`
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
     height: 60%;
     padding: 15px;
 
@@ -63,6 +62,14 @@ export const LinksContainer = styled.div`
     opacity: 0;
     transition: opacity 0.5s ease;
     z-index: 10;
+  `}
+`;
+
+export const StyledTag = styled.div`
+  ${({}) => css`
+    display: flex;
+    flex-wrap: wrap;
+    height: 78px;
   `}
 `;
 

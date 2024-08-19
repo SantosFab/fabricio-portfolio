@@ -1,4 +1,4 @@
-import { Theme } from "./ITheme";
+import { Theme } from "./Theme";
 import { sharedValues } from "./sharedValues";
 
 export const light: Theme = {
@@ -11,8 +11,13 @@ export const light: Theme = {
     four: "#2c3e50",
   },
   background: {
-    color1: "#EDFDFF",
-    color2: "#E0FFF2",
-    color3: "#CCE8E4",
+    layout: {
+      dark: "#CCE8E4",
+      light: "#E0FFF2",
+    },
+    container: {
+      dark: "#E0EBFF",
+      light: "#EDFDFF",
+    },
   },
 };

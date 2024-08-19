@@ -8,10 +8,10 @@ export const StyledSessionContainer = styled.div`
     }
 
     &:nth-child(even) {
-      background-color: ${theme.background.color3};
+      background-color: ${theme.background.layout.dark};
     }
     &:nth-child(odd) {
-      background-color: ${theme.background.color1};
+      background-color: ${theme.background.layout.light};
     }
   `}
 `;
@@ -41,9 +41,9 @@ export const StyledDiv = styled.div<StyledDivProps>`
 export const StyledTitle = styled.h2`
   ${({ theme }) => css`
     padding-bottom: 40px;
-    font-size: ${theme.fontSize.subTitleResponse};
+    font-size: ${theme.fontSize.h2.responsive};
     @media screen and (max-width: 1024px) {
-      font-size: ${theme.fontSize.subTitleFixed};
+      font-size: ${theme.fontSize.h2.fixed};
     }
   `}
 `;
