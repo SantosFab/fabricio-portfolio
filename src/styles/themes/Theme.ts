@@ -6,6 +6,7 @@ export interface Theme {
     h1: {
       fixed: string;
       responsive: string;
+      fixedSmall: string;
     };
     h2: {
       fixed: string;

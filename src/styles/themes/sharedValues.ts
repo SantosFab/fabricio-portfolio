@@ -3,6 +3,7 @@ export const sharedValues = {
     h1: {
       fixed: "38px",
       responsive: "3vw",
+      fixedSmall: "30px",
     },
     h2: {
       fixed: "30px",
