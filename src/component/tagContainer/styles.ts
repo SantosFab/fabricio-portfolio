@@ -47,6 +47,7 @@ export const StyledTagContainer = styled.div<StyledTagContainerProps>`
       border-radius: 10px;
       font-size: 14px;
       margin: 3px;
+      height: 33px;
       color: white;
       font-weight: bold;
       display: inline;

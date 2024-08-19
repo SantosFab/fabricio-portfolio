@@ -1,4 +1,4 @@
-import { FunctionComponent, useState } from "react";
+import { FunctionComponent, ReactNode, useState } from "react";
 import * as Styled from "./styles";
 import { Modal } from "@/component/modal/ImageModal";
 import Image, { StaticImageData } from "next/image";
@@ -10,6 +10,7 @@ interface ProjectContainerProps {
   hrefPreview: string;
   images: StaticImageData[];
   title: string;
+  children: ReactNode;
 }
 
 export const ProjectContainer: FunctionComponent<ProjectContainerProps> = ({
@@ -18,6 +19,7 @@ export const ProjectContainer: FunctionComponent<ProjectContainerProps> = ({
   hrefPreview,
   images,
   title,
+  children,
 }) => {
   const [isModalOpen, setModalOpen] = useState(false);
 
@@ -40,20 +42,16 @@ export const ProjectContainer: FunctionComponent<ProjectContainerProps> = ({
       />
       <Styled.StyledBody>
         <h2>{title}</h2>
-        <Styled.StyledTag>
-          <TagContainer tag="CSS"></TagContainer>
-          <TagContainer tag="CSS"></TagContainer>
-          <TagContainer tag="CSS"></TagContainer>
-          <TagContainer tag="CSS"></TagContainer>
-          <TagContainer tag="NextJs"></TagContainer>
-          <TagContainer tag="NextJs"></TagContainer>
-          <TagContainer tag="NextJs"></TagContainer>
-        </Styled.StyledTag>
+        <Styled.StyledTag>{children}</Styled.StyledTag>
         <p>{body}</p>
       </Styled.StyledBody>
       <Styled.LinksContainer>
-        <Styled.StyledLink href={hrefPreview}>Preview</Styled.StyledLink>
-        <Styled.StyledLink href={hrefGit}>Github</Styled.StyledLink>
+        <Styled.StyledLink href={hrefPreview} target="_blank">
+          Preview
+        </Styled.StyledLink>
+        <Styled.StyledLink href={hrefGit} target="_blank">
+          Github
+        </Styled.StyledLink>
       </Styled.LinksContainer>
 
       <Modal isOpen={isModalOpen} onClose={handleCloseModal} images={images} />
