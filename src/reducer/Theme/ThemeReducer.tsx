@@ -1,7 +1,7 @@
 "use client";
 import { light } from "@/styles/themes/light";
 import { dark } from "@/styles/themes/dark";
-import { Theme } from "@/styles/themes/ITheme";
+import { Theme } from "@/styles/themes/Theme";
 
 export type Action = { type: "TOGGLE_THEME" };
 
