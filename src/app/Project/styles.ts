@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 export const StyledProject = styled.div`
   ${({ theme }) => css`
-    background-color: ${theme.background.color1};
+    background-color: ${theme.background.layout.light};
     min-height: calc(100vh - 70px);
 
     & > div {
