@@ -16,5 +16,10 @@ export const sharedValues = {
       fixed: "20px",
       responsive: "1.2vw",
     },
+    card: {
+      title: "22px",
+      tag: "11px",
+      body: "15px",
+    },
   },
 };

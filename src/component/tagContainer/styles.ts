@@ -6,7 +6,7 @@ interface StyledTagContainerProps {
 }
 
 export const StyledTagContainer = styled.div<StyledTagContainerProps>`
-  ${({ $tag }) => {
+  ${({ $tag, theme }) => {
     const backgroundColor = (() => {
       switch ($tag) {
         case "HTML":
@@ -45,9 +45,8 @@ export const StyledTagContainer = styled.div<StyledTagContainerProps>`
     return css`
       padding: 6px 10px;
       border-radius: 10px;
-      font-size: 14px;
+      font-size: ${theme.fontSize.card.tag};
       margin: 3px;
-      height: 33px;
       color: white;
       font-weight: bold;
       display: inline;

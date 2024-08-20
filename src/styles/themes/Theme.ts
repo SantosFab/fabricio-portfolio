@@ -19,6 +19,11 @@ export interface Theme {
       fixed: string;
       responsive: string;
     };
+    card: {
+      title: string;
+      tag: string;
+      body: string;
+    };
   };
   fontColors: {
     one: string;

@@ -3,11 +3,11 @@ import { StyledLink as ExternalStyledLink } from "@/app/styles";
 
 export const StyledProjectContainer = styled.div`
   ${({ theme }) => css`
-    width: 24%;
+    width: 19%;
     margin-left: 0.5%;
     margin-right: 0.5%;
     margin-bottom: 1%;
-    height: 400px;
+    height: 450px;
     background-color: ${theme.background.container.dark};
     border-radius: 10px;
     position: relative;
@@ -26,20 +26,22 @@ export const StyledProjectContainer = styled.div`
 `;
 
 export const StyledBody = styled.div`
-  ${({}) => css`
+  ${({ theme }) => css`
     display: flex;
     flex-direction: column;
     justify-content: start;
     height: 60%;
-    padding: 15px;
+    padding: 10px 15px;
 
     & h2 {
       text-align: center;
-      padding-bottom: 10px;
+      padding-bottom: 5px;
+      font-size: ${theme.fontSize.card.title};
     }
 
     & p {
       text-align: justify;
+      font-size: ${theme.fontSize.card.body};
     }
   `}
 `;
@@ -69,7 +71,9 @@ export const StyledTag = styled.div`
   ${({}) => css`
     display: flex;
     flex-wrap: wrap;
-    height: 78px;
+    align-items: start;
+    height: 69px;
+    margin-bottom: 5px;
   `}
 `;
 

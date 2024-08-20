@@ -27,11 +27,11 @@ export default function Project() {
         >
           <TagContainer tag="HTML" />
           <TagContainer tag="CSS" />
-          <TagContainer tag="TypeScript" />
-          <TagContainer tag="BootsTrap" />
           <TagContainer tag="React" />
           <TagContainer tag="Redux" />
           <TagContainer tag="Router" />
+          <TagContainer tag="BootsTrap" />
+          <TagContainer tag="TypeScript" />
         </ProjectContainer>
         <ProjectContainer
           title="calculator"
