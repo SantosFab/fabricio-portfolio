@@ -7,7 +7,7 @@ export const StyledTitle = styled.h1`
       font-size: ${theme.fontSize.h1.fixed};
     }
     @media screen and (max-width: 549px) {
-      font-size: ${theme.fontSize.h1.fixedSmall};
+      font-size: ${theme.fontSize.h1.smFixed};
     }
   `}
 `;

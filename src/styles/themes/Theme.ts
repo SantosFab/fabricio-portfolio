@@ -6,7 +6,7 @@ export interface Theme {
     h1: {
       fixed: string;
       responsive: string;
-      fixedSmall: string;
+      smFixed: string;
     };
     h2: {
       fixed: string;
@@ -21,8 +21,10 @@ export interface Theme {
     };
     card: {
       title: string;
+      lgTitle: string;
       tag: string;
       body: string;
+      lgBody: string;
     };
   };
   fontColors: {

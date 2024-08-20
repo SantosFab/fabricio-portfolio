@@ -28,7 +28,7 @@ export default function RootLayout({
                 Início
               </Styled.StyledNavegation>
               <Styled.StyledNavegation href={"/Project"}>
-                Projeto
+                Projetos
               </Styled.StyledNavegation>
               <Input />
             </Styled.StyledNav>

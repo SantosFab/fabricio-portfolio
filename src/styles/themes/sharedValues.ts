@@ -3,7 +3,7 @@ export const sharedValues = {
     h1: {
       fixed: "38px",
       responsive: "3vw",
-      fixedSmall: "30px",
+      smFixed: "30px",
     },
     h2: {
       fixed: "30px",
@@ -18,8 +18,10 @@ export const sharedValues = {
     },
     card: {
       title: "22px",
+      lgTitle: "19px",
       tag: "11px",
-      body: "15px",
+      body: "14px",
+      lgBody: "13px",
     },
   },
 };
