@@ -2,23 +2,26 @@ import { FunctionComponent, ReactNode } from "react";
 import * as Styled from "./styles";
 
 interface SessionContainerProps {
+  title?: string;
   children: ReactNode;
   isColumn?: boolean;
-  isForm?: boolean;
-  title?: string;
+  isJustifyStart?: boolean;
+  isAlignStart?: boolean;
 }
 
 export const SessionContainer: FunctionComponent<SessionContainerProps> = ({
   children,
   title,
   isColumn,
-  isForm,
+  isJustifyStart,
+  isAlignStart,
 }) => {
   return (
     <Styled.StyledSessionContainer>
       <Styled.StyledDiv
         $isColumn={isColumn}
-        $isForm={isForm}
+        $isJustifyStart={isJustifyStart}
+        $isAlignStart={isAlignStart}
         className="container mx-auto"
       >
         {title && <Styled.StyledTitle>{title}</Styled.StyledTitle>}

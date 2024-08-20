@@ -26,12 +26,12 @@ export const StyledNavegation = styled(Link)`
 
 export const StyledParagraph = styled.div`
   ${({}) => css`
-    font-size: ${({ theme }) => theme.fontSize.paragraphResponse};
+    font-size: ${({ theme }) => theme.fontSize.p.responsive};
     text-align: center;
   `}
 
   @media screen and (max-width: 1024px) {
-    font-size: ${({ theme }) => theme.fontSize.paragraphFixed};
+    font-size: ${({ theme }) => theme.fontSize.p.fixed};
   }
 `;
 
@@ -45,8 +45,8 @@ export const StyledLink = styled.a`
 
     &:first-of-type {
       margin-right: 20px;
-      background-color: ${theme.background.color3};
-      border-color: ${theme.background.color3};
+      background-color: ${theme.background.layout.dark};
+      border-color: ${theme.background.layout.dark};
     }
   `}
 `;
@@ -56,8 +56,12 @@ export const StyledSubmit = styled.button`
     width: 30%;
     border-radius: 31px;
     padding: 10px;
-    background-color: ${theme.background.color2};
+    background-color: ${theme.background.container.light};
     margin: auto;
     display: block;
+
+    &:hover {
+      background-color: ${theme.background.container.dark};
+    }
   `}
 `;

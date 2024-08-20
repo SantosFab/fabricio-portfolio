@@ -8,7 +8,7 @@ export const StyledTechnology = styled.div`
     align-items: center;
     margin: 20px;
     & h2 {
-      font-size: ${theme.fontSize.titleH3};
+      font-size: ${theme.fontSize.h3.fixed};
     }
   `}
 `;

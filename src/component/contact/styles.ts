@@ -18,7 +18,7 @@ export const StyledContact = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: ${theme.background.color1};
+      background-color: ${theme.background.container.light};
       width: 90px;
       height: 90px;
       border-radius: 50%;
@@ -31,9 +31,6 @@ export const StyledContact = styled.div`
 
     @media screen and (max-width: 1280px) {
       margin: 20px;
-    }
-    @media screen and (max-width: 640px) {
-      width: 42%;
     }
   `}
 `;

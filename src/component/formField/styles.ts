@@ -14,7 +14,7 @@ export const StyledFormField = styled.div<StyledFromFieldProps>`
     textarea:focus {
       outline: none;
       box-shadow: none;
-      background-color: ${theme.background.color2};
+      background-color: ${theme.background.container.dark};
     }
 
     & small {
@@ -30,7 +30,7 @@ export const StyledFormField = styled.div<StyledFromFieldProps>`
 
     & textarea,
     input {
-      background-color: ${theme.background.color1};
+      background-color: ${theme.background.container.light};
       border-radius: 31px;
       padding: 10px 15px;
     }

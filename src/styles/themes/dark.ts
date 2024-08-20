@@ -1,7 +1,7 @@
-import { ITheme } from "./ITheme";
+import { Theme } from "./Theme";
 import { sharedValues } from "./sharedValues";
 
-export const dark: ITheme = {
+export const dark: Theme = {
   title: "dark",
   ...sharedValues,
   fontColors: {
@@ -11,8 +11,13 @@ export const dark: ITheme = {
     four: " #f2f2f2",
   },
   background: {
-    color1: "#2E2D33",
-    color2: "#484554",
-    color3: "#0C0B0D",
+    layout: {
+      dark: "#0C0B0D",
+      light: "#2E2D33",
+    },
+    container: {
+      dark: "#484554",
+      light: "#514F59",
+    },
   },
 };
