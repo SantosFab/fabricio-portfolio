@@ -52,7 +52,7 @@ export default function Project() {
           hrefPreview="https://projectspotify.vercel.app/"
           images={[spotify1, spotify2, spotify3]}
           body="Primeiro projeto web desenvolvidos utilizando as Tecnologias HTML/CSS e BootsTrap.
-          Nele, repliquei a interface do site Spotify - Premium"
+          Nele, repliquei a interface do site Spotify - Premium University"
         >
           <TagContainer tag="HTML" />
           <TagContainer tag="CSS" />
