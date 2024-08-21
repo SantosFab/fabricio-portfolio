@@ -34,7 +34,7 @@ export default function Home() {
           </Styled.StyledParagraph>
           <div>
             <Styled.StyledLink
-              href="/documents/Currículo-Fabrício_Santos.pdf"
+              href="/documents/Curriculo-Fabricio_Santos.pdf"
               download
             >
               Dowload CV
