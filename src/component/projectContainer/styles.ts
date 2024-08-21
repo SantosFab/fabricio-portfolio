@@ -17,10 +17,6 @@ export const StyledProjectContainer = styled.div`
       cursor: pointer;
     }
 
-    & > div:last-of-type:hover {
-      opacity: 1;
-    }
-
     @media screen and (max-width: 1536px) {
       width: 24%;
     }
@@ -101,10 +97,14 @@ export const StyledLink = styled(ExternalStyledLink)`
   `}
 `;
 
-export const LinksContainer = styled.div`
-  ${({}) => css`
+interface LinksContainerProps {
+  $show: boolean;
+}
+
+export const LinksContainer = styled.div<LinksContainerProps>`
+  ${({ $show }) => css`
     position: absolute;
-    display: flex;
+    display: ${$show ? "flex" : "none"};
     justify-content: center;
     align-items: center;
     top: 40%;
@@ -112,15 +112,12 @@ export const LinksContainer = styled.div`
     height: 60%;
     border-radius: 0 0 10px 10px;
     background-color: rgba(0, 0, 0, 0.6);
-    opacity: 0;
     transition: opacity 0.5s ease;
     z-index: 10;
+
     @media screen and (max-width: 1024px) {
       top: 45%;
       height: 55%;
-    }
-
-    @media screen and (max-width: 1024px) {
     }
   `}
 `;

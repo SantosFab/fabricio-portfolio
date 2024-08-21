@@ -10,12 +10,15 @@ import cineMeet3 from "../../../public/image/cineMeet/cineMeet3.png";
 import cineMeet4 from "../../../public/image/cineMeet/cineMeet4.png";
 import calculator1 from "../../../public/image/calculator/calculator1.png";
 import { TagContainer } from "@/component/tagContainer/TagContainer";
+import { useDeviceType } from "@/hook/useDeviceType/useDeviceType";
 
 export default function Project() {
+  const isMobile = useDeviceType();
   return (
     <Styled.StyledProject>
       <div className="container  flex flex-col items-center sm:flex-none sm:flex-row">
         <ProjectContainer
+          isMobile={isMobile}
           title="CineMeet"
           hrefGit="https://github.com/SantosFab/cine-meet"
           hrefPreview="https://cinemeet.vercel.app/"
@@ -33,6 +36,7 @@ export default function Project() {
           <TagContainer tag="TypeScript" />
         </ProjectContainer>
         <ProjectContainer
+          isMobile={isMobile}
           title="calculator"
           hrefGit="https://github.com/SantosFab/calculator"
           hrefPreview="https://calculatordev.vercel.app/"
@@ -47,6 +51,7 @@ export default function Project() {
           <TagContainer tag="BootsTrap" />
         </ProjectContainer>
         <ProjectContainer
+          isMobile={isMobile}
           title="Project - Spotify"
           hrefGit="https://github.com/SantosFab/First-Web-Project-Spotify"
           hrefPreview="https://projectspotify.vercel.app/"
