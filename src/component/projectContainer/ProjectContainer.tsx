@@ -11,17 +11,20 @@ interface ProjectContainerProps {
   images: StaticImageData[];
   title: string;
   children: ReactNode;
+  isMobile: boolean;
 }
 
 export const ProjectContainer: FunctionComponent<ProjectContainerProps> = ({
   body,
   hrefGit,
   hrefPreview,
+  isMobile,
   images,
   title,
   children,
 }) => {
   const [isModalOpen, setModalOpen] = useState(false);
+  const [showLinks, setShowLinks] = useState(false);
 
   const handleImageClick = () => {
     setModalOpen(true);
@@ -29,6 +32,24 @@ export const ProjectContainer: FunctionComponent<ProjectContainerProps> = ({
 
   const handleCloseModal = () => {
     setModalOpen(false);
+  };
+
+  const handleMobileClick = () => {
+    if (isMobile) {
+      setShowLinks(!showLinks);
+    }
+  };
+
+  const handleMouseEnter = () => {
+    if (!isMobile) {
+      setShowLinks(true);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (!isMobile) {
+      setShowLinks(false);
+    }
   };
 
   return (
@@ -40,12 +61,19 @@ export const ProjectContainer: FunctionComponent<ProjectContainerProps> = ({
         quality={50}
         onClick={handleImageClick}
       />
-      <Styled.StyledBody>
+      <Styled.StyledBody
+        onMouseEnter={handleMouseEnter}
+        onClick={handleMobileClick}
+      >
         <h2>{title}</h2>
         <Styled.StyledTag>{children}</Styled.StyledTag>
         <p>{body}</p>
       </Styled.StyledBody>
-      <Styled.LinksContainer>
+      <Styled.LinksContainer
+        $show={showLinks}
+        onMouseLeave={handleMouseLeave}
+        onClick={handleMobileClick}
+      >
         <Styled.StyledLink href={hrefPreview} target="_blank">
           Preview
         </Styled.StyledLink>
