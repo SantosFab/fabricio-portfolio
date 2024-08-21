@@ -43,6 +43,11 @@ export const StyledProjectContainer = styled.div`
     @media screen and (max-width: 768px) {
       width: 45%;
       margin: 0 2.5% 5% 2.5%;
+      min-height: 330px;
+    }
+    @media screen and (max-width: 640px) {
+      width: 240px;
+      margin: 0 auto 10% auto;
       height: 330px;
     }
   `}
@@ -106,7 +111,7 @@ export const LinksContainer = styled.div`
     width: 100%;
     height: 60%;
     border-radius: 0 0 10px 10px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.6);
     opacity: 0;
     transition: opacity 0.5s ease;
     z-index: 10;
@@ -133,21 +138,3 @@ export const StyledTag = styled.div`
     }
   `}
 `;
-
-/* @media screen and (max-width: 1536px) {
-      margin: 25px;
-    }
-
-    @media screen and (max-width: 1280px) {
-      margin: 16px 32px;
-    }
-    @media screen and (max-width: 1024px) {
-      width: 210px;
-      height: 230px;
-      & a {
-        font-size: 12px;
-      }
-    }
-    @media screen and (max-width: 768px) {
-      margin: 25px 31px;
-    } */
