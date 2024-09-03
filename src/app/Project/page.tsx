@@ -9,6 +9,8 @@ import cineMeet2 from "../../../public/image/cineMeet/cineMeet2.png";
 import cineMeet3 from "../../../public/image/cineMeet/cineMeet3.png";
 import cineMeet4 from "../../../public/image/cineMeet/cineMeet4.png";
 import calculator1 from "../../../public/image/calculator/calculator1.png";
+import toDo1 from "../../../public/image/toDo/toDo1.png";
+import toDo2 from "../../../public/image/toDo/toDo2.png";
 import { TagContainer } from "@/component/tagContainer/TagContainer";
 import { useDeviceType } from "@/hook/useDeviceType/useDeviceType";
 
@@ -62,6 +64,19 @@ export default function Project() {
           <TagContainer tag="HTML" />
           <TagContainer tag="CSS" />
           <TagContainer tag="BootsTrap" />
+        </ProjectContainer>
+        <ProjectContainer
+          isMobile={isMobile}
+          title="ToDo - App"
+          hrefGit="https://github.com/SantosFab/to_do"
+          hrefPreview="https://taskappdev.vercel.app/"
+          images={[toDo1, toDo2]}
+          body="O projeto ToDo é uma aplicação simples de gerenciamento de tarefas que permite aos usuários criar, mover e excluir tarefas."
+        >
+          <TagContainer tag="HTML" />
+          <TagContainer tag="CSS" />
+          <TagContainer tag="TypeScript" />
+          <TagContainer tag="Tailwinds" />
         </ProjectContainer>
       </div>
     </Styled.StyledProject>
